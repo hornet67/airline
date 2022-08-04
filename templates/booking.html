@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block  content %}
+
+    <div class="container">
+        <h1>Flight Booking Form</h1>
+
+
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+             <input class = 'bg-primary' type="submit" value="Book Now">
+        </form>
+
+    </div>
+
+{%  endblock %}

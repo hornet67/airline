@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block  content %}
+
+<h1>Login Form</h1>
+
+
+          <form action="{% url 'schedule' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+
+            <input class = 'bg-primary' type="submit" value="Login">
+        </form>
+
+<a href="http:{% url 'schedule' %}">
+    <button>flight Shedule </button></a>
+
+
+
+
+<P>Don't have account? <a href="{% url 'register' %}">Reegister</a> </P>
+{%  endblock %}
